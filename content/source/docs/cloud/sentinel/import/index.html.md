@@ -9,7 +9,7 @@ Sentinel Policies for Terraform are defined using the [Sentinel policy
 language](https://docs.hashicorp.com/sentinel/language/). A policy can include
 [imports](https://docs.hashicorp.com/sentinel/concepts/imports) which enable a
 policy to access reusable libraries, external data and functions. Terraform
-Enterprise provides three imports to define policy rules for the configuration,
+Enterprise provides four imports to define policy rules for the configuration,
 state and plan.
 
 - [tfplan](./tfplan.html) - This provides access to a Terraform plan, the file
@@ -21,6 +21,8 @@ state and plan.
   infrastructure state.
 - [tfstate](./tfstate.html) - This provides access to the Terraform state, the
   file used by Terraform to map real world resources to your configuration.
+- [tfrun](./tfrun.html) - This provides access to data associated with a run
+  in Terraform Enterprise, such as the run's workspace.
 
 Terraform Cloud allows you to create mocks of these imports from plans for
 use with the mocking or testing features of the [Sentinel
